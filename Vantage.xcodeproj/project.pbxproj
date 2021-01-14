@@ -3,27 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0296DE13258F291E000DC67D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296DE12258F291E000DC67D /* AppDelegate.swift */; };
 		0296DE15258F291E000DC67D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296DE14258F291E000DC67D /* SceneDelegate.swift */; };
-		0296DE17258F291E000DC67D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296DE16258F291E000DC67D /* ViewController.swift */; };
 		0296DE1A258F291E000DC67D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0296DE18258F291E000DC67D /* Main.storyboard */; };
 		0296DE1C258F2923000DC67D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0296DE1B258F2923000DC67D /* Assets.xcassets */; };
 		0296DE1F258F2923000DC67D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0296DE1D258F2923000DC67D /* LaunchScreen.storyboard */; };
+		0296DE29258F2F22000DC67D /* AlphaVantage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296DE28258F2F22000DC67D /* AlphaVantage.swift */; };
+		0296DE3A2591131F000DC67D /* FormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296DE392591131F000DC67D /* FormVC.swift */; };
+		0296DE3F25933085000DC67D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0296DE3E25933085000DC67D /* SDWebImage */; };
+		0296DE4125933085000DC67D /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0296DE4025933085000DC67D /* SDWebImageMapKit */; };
+		0296DE44259337D4000DC67D /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296DE43259337D3000DC67D /* JsonReader.swift */; };
+		0296DE47259338BE000DC67D /* CurrencyExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296DE46259338BE000DC67D /* CurrencyExchangeRate.swift */; };
+		02C32E1F25B0F39C005CE759 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C32E1E25B0F39C005CE759 /* InfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0296DE0F258F291E000DC67D /* Vantage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vantage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0296DE12258F291E000DC67D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0296DE14258F291E000DC67D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0296DE16258F291E000DC67D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0296DE19258F291E000DC67D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0296DE1B258F2923000DC67D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0296DE1E258F2923000DC67D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0296DE20258F2923000DC67D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0296DE28258F2F22000DC67D /* AlphaVantage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaVantage.swift; sourceTree = "<group>"; };
+		0296DE392591131F000DC67D /* FormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormVC.swift; sourceTree = "<group>"; };
+		0296DE43259337D3000DC67D /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
+		0296DE46259338BE000DC67D /* CurrencyExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeRate.swift; sourceTree = "<group>"; };
+		02C32E1E25B0F39C005CE759 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0296DE4125933085000DC67D /* SDWebImageMapKit in Frameworks */,
+				0296DE3F25933085000DC67D /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,59 @@
 		0296DE11258F291E000DC67D /* Vantage */ = {
 			isa = PBXGroup;
 			children = (
+				0296DE2F258F39E1000DC67D /* Model */,
+				0296DE2E258F39D7000DC67D /* Views */,
+				0296DE2C258F3955000DC67D /* Presenters */,
+				0296DE2B258F3948000DC67D /* Storyboards */,
+				0296DE27258F2F09000DC67D /* AlphaVantage */,
 				0296DE12258F291E000DC67D /* AppDelegate.swift */,
 				0296DE14258F291E000DC67D /* SceneDelegate.swift */,
-				0296DE16258F291E000DC67D /* ViewController.swift */,
-				0296DE18258F291E000DC67D /* Main.storyboard */,
 				0296DE1B258F2923000DC67D /* Assets.xcassets */,
 				0296DE1D258F2923000DC67D /* LaunchScreen.storyboard */,
 				0296DE20258F2923000DC67D /* Info.plist */,
 			);
 			path = Vantage;
+			sourceTree = "<group>";
+		};
+		0296DE27258F2F09000DC67D /* AlphaVantage */ = {
+			isa = PBXGroup;
+			children = (
+				0296DE28258F2F22000DC67D /* AlphaVantage.swift */,
+			);
+			path = AlphaVantage;
+			sourceTree = "<group>";
+		};
+		0296DE2B258F3948000DC67D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0296DE18258F291E000DC67D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0296DE2C258F3955000DC67D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		0296DE2E258F39D7000DC67D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0296DE392591131F000DC67D /* FormVC.swift */,
+				02C32E1E25B0F39C005CE759 /* InfoVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0296DE2F258F39E1000DC67D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0296DE43259337D3000DC67D /* JsonReader.swift */,
+				0296DE46259338BE000DC67D /* CurrencyExchangeRate.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +139,10 @@
 			dependencies = (
 			);
 			name = Vantage;
+			packageProductDependencies = (
+				0296DE3E25933085000DC67D /* SDWebImage */,
+				0296DE4025933085000DC67D /* SDWebImageMapKit */,
+			);
 			productName = Vantage;
 			productReference = 0296DE0F258F291E000DC67D /* Vantage.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 0296DE06258F291E000DC67D;
+			packageReferences = (
+				0296DE3D25933085000DC67D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 0296DE10258F291E000DC67D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0296DE17258F291E000DC67D /* ViewController.swift in Sources */,
+				0296DE3A2591131F000DC67D /* FormVC.swift in Sources */,
+				0296DE44259337D4000DC67D /* JsonReader.swift in Sources */,
+				0296DE29258F2F22000DC67D /* AlphaVantage.swift in Sources */,
+				0296DE47259338BE000DC67D /* CurrencyExchangeRate.swift in Sources */,
+				02C32E1F25B0F39C005CE759 /* InfoVC.swift in Sources */,
 				0296DE13258F291E000DC67D /* AppDelegate.swift in Sources */,
 				0296DE15258F291E000DC67D /* SceneDelegate.swift in Sources */,
 			);
@@ -341,6 +408,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0296DE3D25933085000DC67D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0296DE3E25933085000DC67D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0296DE3D25933085000DC67D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		0296DE4025933085000DC67D /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0296DE3D25933085000DC67D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0296DE07258F291E000DC67D /* Project object */;
 }

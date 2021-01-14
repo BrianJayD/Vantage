@@ -9,9 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+    }
+    
+    @IBAction func viewTapped(_ sender: Any) {
+        let av = AlphaVantage()
+        av.getCurrencyQuote()
     }
 
 
